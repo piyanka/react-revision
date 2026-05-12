@@ -4,11 +4,19 @@ function App() {
   let [counter, setCounter] = useState(5);
 
   const IncrementCounter = () => {
-    setCounter(counter + 1);
+    if(counter < 20){
+      setCounter(counter + 1);
+    }else{
+      alert("You can't perform this function more.");
+    }
   }
 
   const DecrementCounter = () => {
-    setCounter(counter - 1);
+    if(counter > 0){
+      setCounter(counter - 1);
+    }else{
+      alert("You can't perform this function more.");
+    }
   }
   
   return (
